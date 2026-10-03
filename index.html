@@ -481,39 +481,40 @@
       </div>
 
       <div class="donate-grid">
-        <!-- Interactive Amount Selector Card Left -->
+        <!-- Left Card: Direct UPI & Official PhonePe QR -->
         <div class="donation-interactive-card reveal-left">
-          <h3 data-i18n="donate.chooseAmount">Select Your Contribution Amount:</h3>
-
-          <div class="amount-selector-grid">
-            <button class="amount-btn" data-amount="500">₹500</button>
-            <button class="amount-btn active" data-amount="1000">₹1,000</button>
-            <button class="amount-btn" data-amount="2500">₹2,500</button>
-            <button class="amount-btn" data-amount="5000">₹5,000</button>
-          </div>
-
-          <div class="amount-description-box">
-            <i class="fa-solid fa-hand-holding-heart"></i>
-            <span id="donationImpactDesc">Fund a complete tailoring starter kit for a woman trainee.</span>
-          </div>
-
-          <div class="custom-amount-wrap">
-            <span class="currency-symbol">₹</span>
-            <input type="number" id="customAmountInput" min="100" step="50" placeholder="Or Enter Custom Amount (₹)" data-i18n-placeholder="donate.customPlaceholder">
-          </div>
-
-          <!-- Official QR Code Image Preview -->
-          <div style="background: var(--surface-alt); border-radius: var(--radius-md); padding: 18px; text-align: center; border: 1px solid var(--border-color); margin-bottom: 20px;">
-            <div class="qr-bank-tag" style="background: var(--navy); color: #ffffff;">
-              <i class="fa-solid fa-building-columns" style="color: #fbbf24;"></i> UNION BANK OF INDIA - 0222
+          <div>
+            <h3><i class="fa-solid fa-qrcode"></i> <span data-i18n="donate.upiTitle">Scan & Pay via UPI App</span></h3>
+            
+            <div class="qr-scan-wrapper">
+              <div style="font-size: 0.76rem; font-weight: 700; color: var(--navy); margin-bottom: 8px;">
+                <i class="fa-solid fa-building-columns" style="color: var(--primary);"></i> UNION BANK OF INDIA - 0222
+              </div>
+              <div class="qr-image-container">
+                <img src="assets/images/qr-code.png" alt="Union Bank PhonePe QR Code - Anand Janki Jankalyan Samiti">
+              </div>
+              <div class="upi-id-badge">anandjankijks@ybl</div>
+              <div>
+                <button class="btn btn-primary btn-copy-upi" style="padding: 7px 18px; font-size: 0.85rem;">
+                  <i class="fa-regular fa-copy"></i> <span data-i18n="donate.copyUpi">Copy UPI ID</span>
+                </button>
+              </div>
             </div>
-            <div class="qr-image-container">
-              <img src="assets/images/qr-code.png" alt="Official Union Bank PhonePe QR Code - Anand Janki Jankalyan Samiti">
+
+            <div style="margin-top: 14px;">
+              <label style="font-size: 0.82rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 8px;" data-i18n="donate.chooseAmount">Quick Contribution Amount:</label>
+              <div class="amount-selector-grid">
+                <button class="amount-btn" data-amount="500">₹500</button>
+                <button class="amount-btn active" data-amount="1000">₹1,000</button>
+                <button class="amount-btn" data-amount="2500">₹2,500</button>
+                <button class="amount-btn" data-amount="5000">₹5,000</button>
+              </div>
+
+              <div class="amount-description-box">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <span id="donationImpactDesc">Fund a complete tailoring starter kit for a woman trainee.</span>
+              </div>
             </div>
-            <div style="font-weight: 800; color: var(--navy); font-size: 1.05rem; margin-bottom: 10px;">anandjankijks@ybl</div>
-            <button class="btn btn-primary btn-copy-upi" style="padding: 7px 18px;">
-              <i class="fa-regular fa-copy"></i> <span data-i18n="donate.copyUpi">Copy UPI ID</span>
-            </button>
           </div>
 
           <div class="tax-badge-note">
@@ -524,29 +525,37 @@
           </div>
         </div>
 
-        <!-- Bank Account & UPI Details Right -->
+        <!-- Right Card: Direct Bank Account Transfer -->
         <div class="donation-bank-info-card reveal-right">
-          <div class="bank-card-section">
-            <h4 data-i18n="donate.bankTitle"><i class="fa-solid fa-building-columns"></i> Direct Bank Account Details</h4>
-            <ul class="bank-details-list">
-              <li><strong data-i18n="donate.bankName">Bank Name: UNION BANK OF INDIA</strong></li>
-              <li><strong data-i18n="donate.accName">Account Name: Anand Janki Jankalyan Samiti</strong></li>
-              <li><span data-i18n="donate.accNo">Account Number: 195721010000222</span></li>
-              <li><span data-i18n="donate.ifsc">IFSC Code: UBIN0919578</span></li>
-              <li><span data-i18n="donate.branch">Branch: Primary Operational Account</span></li>
-            </ul>
+          <div>
+            <div class="bank-card-section">
+              <h4 data-i18n="donate.bankTitle"><i class="fa-solid fa-building-columns"></i> Direct Bank Account Details</h4>
+              <ul class="bank-details-list">
+                <li><strong data-i18n="donate.bankName">Bank Name: UNION BANK OF INDIA</strong></li>
+                <li><strong data-i18n="donate.accName">Account Name: Anand Janki Jankalyan Samiti</strong></li>
+                <li><span data-i18n="donate.accNo">Account Number: 195721010000222</span></li>
+                <li><span data-i18n="donate.ifsc">IFSC Code: UBIN0919578</span></li>
+                <li><span data-i18n="donate.branch">Branch: Primary Operational Account</span></li>
+              </ul>
 
-            <button class="copy-btn btn-copy-bank" style="width: 100%; margin-top: 14px; padding: 10px;">
-              <i class="fa-regular fa-copy"></i>
-              <span data-i18n="donate.copyAcc">Copy All Bank Details</span>
-            </button>
+              <button class="copy-btn btn-copy-bank" style="width: 100%; margin-top: 12px; padding: 10px; font-size: 0.84rem;">
+                <i class="fa-regular fa-copy"></i>
+                <span data-i18n="donate.copyAcc">Copy All Bank Details</span>
+              </button>
+            </div>
+
+            <div class="receipt-note-box">
+              <h5><i class="fa-solid fa-envelope-circle-check"></i> Instant Receipt Confirmation:</h5>
+              <p>
+                Please WhatsApp your payment transaction screenshot along with your Full Name and City to <strong>+91 8298413062</strong> or email to <strong>info@anandjankijks.com</strong> for immediate acknowledgment.
+              </p>
+            </div>
           </div>
 
-          <div class="bank-card-section" style="background: rgba(0,0,0,0.2); padding: 16px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1);">
-            <h4 style="font-size: 0.95rem; margin-bottom: 8px;"><i class="fa-solid fa-envelope-circle-check"></i> Instant Receipt Confirmation:</h4>
-            <p style="font-size: 0.84rem; color: #cbd5e1; line-height: 1.5;">
-              Please WhatsApp your payment transaction screenshot along with your Full Name and City to <strong>+91 8298413062</strong> or email to <strong>info@anandjankijks.com</strong> for immediate acknowledgment.
-            </p>
+          <div style="margin-top: 16px; text-align: center;">
+            <a href="https://wa.me/918298413062?text=Hello%20Anand%20Janki%20Jankalyan%20Samiti,%20I%20have%20made%20a%20donation" target="_blank" class="btn btn-secondary" style="width: 100%; padding: 11px;">
+              <i class="fa-brands fa-whatsapp"></i> Send Receipt on WhatsApp
+            </a>
           </div>
         </div>
       </div>

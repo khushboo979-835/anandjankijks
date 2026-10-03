@@ -1110,7 +1110,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 9px;
 }
 
-/* ---------------- Donation Section ---------------- */
+/* ---------------- Donation Section (Formal & Balanced) ---------------- */
 .donate-section {
   background: linear-gradient(135deg, #093733 0%, #064e3b 100%);
   color: #ffffff;
@@ -1128,37 +1128,95 @@ h1, h2, h3, h4, h5, h6 {
 
 .donate-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 32px;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
   align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .donation-interactive-card {
   background: #ffffff;
   color: var(--navy);
   border-radius: var(--radius-xl);
-  padding: 30px 24px;
+  padding: 26px 22px;
   box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .donation-interactive-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--navy);
+}
+
+.donation-interactive-card h3 i {
+  color: var(--secondary);
+}
+
+.qr-scan-wrapper {
+  background: var(--surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  text-align: center;
   margin-bottom: 16px;
+}
+
+.qr-image-container {
+  width: 175px;
+  height: 175px;
+  max-width: 175px;
+  margin: 0 auto 12px;
+  background: #000000;
+  border-radius: var(--radius-md);
+  padding: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  border: 2px solid var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+
+.upi-id-badge {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-xs);
 }
 
 .amount-selector-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 8px;
+  margin-bottom: 14px;
 }
 
 .amount-btn {
   background: var(--surface-alt);
-  border: 2px solid var(--border-color);
-  padding: 12px 8px;
+  border: 1.5px solid var(--border-color);
+  padding: 9px 4px;
   border-radius: var(--radius-md);
-  font-size: 1.08rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: var(--navy);
   text-align: center;
@@ -1174,74 +1232,38 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--primary);
   color: #ffffff;
   border-color: var(--primary);
-  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
+  box-shadow: 0 4px 10px rgba(15, 118, 110, 0.3);
 }
 
 .amount-description-box {
   background: var(--secondary-soft);
   border: 1px dashed var(--secondary);
   border-radius: var(--radius-md);
-  padding: 12px 14px;
-  font-size: 0.88rem;
+  padding: 10px 12px;
+  font-size: 0.84rem;
   color: #78350f;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .amount-description-box i {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   color: var(--secondary);
   flex-shrink: 0;
 }
 
-.custom-amount-wrap {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.custom-amount-wrap input {
-  width: 100%;
-  padding: 12px 16px 12px 40px;
-  border: 2px solid var(--border-color);
-  border-radius: var(--radius-md);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--navy);
-  transition: var(--transition);
-}
-
-.custom-amount-wrap input:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
-}
-
-.currency-symbol {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--text-muted);
-}
-
-.donate-submit-btn {
-  width: 100%;
-  padding: 14px;
-  font-size: 1rem;
-}
-
 .tax-badge-note {
-  margin-top: 16px;
-  font-size: 0.8rem;
+  margin-top: 12px;
+  font-size: 0.78rem;
   color: var(--text-muted);
   display: flex;
   align-items: center;
   gap: 6px;
   justify-content: center;
   text-align: center;
+  line-height: 1.4;
 }
 
 .tax-badge-note i {
@@ -1254,18 +1276,18 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-xl);
-  padding: 26px 20px;
+  padding: 26px 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .bank-card-section {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .bank-card-section h4 {
-  font-size: 1.08rem;
+  font-size: 1.12rem;
   color: #ffffff;
   margin-bottom: 12px;
   display: flex;
@@ -1278,11 +1300,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bank-details-list {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: var(--radius-md);
   padding: 14px 16px;
-  font-size: 0.86rem;
+  font-size: 0.85rem;
   color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .bank-details-list li {
@@ -1305,49 +1328,26 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--secondary-light);
 }
 
-.upi-scan-box {
-  background: rgba(255, 255, 255, 0.12);
+.receipt-note-box {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 14px 16px;
   border-radius: var(--radius-md);
-  padding: 14px;
-  text-align: center;
-  margin-top: 10px;
+  border-left: 3px solid var(--secondary);
 }
 
-.upi-id-tag {
-  display: inline-block;
-  background: #ffffff;
-  color: var(--navy);
-  font-weight: 800;
-  font-size: 0.92rem;
-  padding: 5px 14px;
-  border-radius: var(--radius-full);
-  margin-bottom: 10px;
-}
-
-.copy-btn-group {
-  display: flex;
-  gap: 8px;
-}
-
-.copy-btn {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.18);
+.receipt-note-box h5 {
+  font-size: 0.88rem;
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 7px 10px;
-  border-radius: var(--radius-sm);
-  font-size: 0.78rem;
-  font-weight: 600;
-  display: inline-flex;
+  margin-bottom: 4px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 5px;
-  transition: var(--transition);
+  gap: 6px;
 }
 
-.copy-btn:hover {
-  background: #ffffff;
-  color: var(--navy);
+.receipt-note-box p {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  line-height: 1.45;
 }
 
 /* ---------------- Gallery Section ---------------- */
@@ -2403,39 +2403,7 @@ textarea.form-control {
   line-height: 1.45;
 }
 
-/* Enhanced QR Code Showcase Card */
-.qr-image-container {
-  width: 100%;
-  max-width: 250px;
-  margin: 0 auto 16px;
-  background: #000000;
-  border-radius: var(--radius-lg);
-  padding: 8px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-  border: 2px solid var(--secondary);
-  position: relative;
-  overflow: hidden;
-}
-
-.qr-image-container img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-md);
-  display: block;
-}
-
-.qr-bank-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-  font-size: 0.78rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
+/* Pan-India Presence Media Queries */
 
 @media (max-width: 1024px) {
   .presence-grid {
