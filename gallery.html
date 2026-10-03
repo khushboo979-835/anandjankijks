@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery | Anand Janki Jankalyan Samiti</title>
+  
+  <meta name="description" content="View photo gallery of Anand Janki Jankalyan Samiti featuring women tailoring workshops, child education drives, and free medical camps.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+
+  <!-- ================= TOP UTILITY BAR ================= -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <div class="top-bar-info">
+          <div class="top-bar-item">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span data-i18n="topbar.helpline">Helpline:</span>
+            <a href="tel:+918298413062" style="font-weight: 700; color: #fbbf24;">+91 8298413062</a>
+          </div>
+          <div class="top-bar-item d-none-mobile">
+            <i class="fa-solid fa-envelope"></i>
+            <span data-i18n="topbar.email">Email:</span>
+            <a href="mailto:info@anandjankijks.com">info@anandjankijks.com</a>
+          </div>
+          <div class="top-bar-item d-none-mobile">
+            <i class="fa-solid fa-certificate"></i>
+            <span class="reg-pill" data-i18n="topbar.regNo">Reg. No: 2293-596/2015-2016/AL 36898</span>
+          </div>
+        </div>
+
+        <div class="top-bar-actions">
+          <span class="reg-pill d-none-mobile" data-i18n="topbar.uaNo">U.A. No: BR20E0010867</span>
+          <button id="langSwitchBtn" class="lang-switch-btn" aria-label="Toggle Language English/Hindi">
+            <i class="fa-solid fa-globe"></i>
+            <span data-i18n="topbar.langBtn">हिन्दी</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= STICKY HEADER & NAVBAR ================= -->
+  <header id="siteHeader" class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo.png" alt="Logo" width="48" height="48">
+          <div class="brand-text">
+            <span class="brand-name">ANAND JANKI</span>
+            <span class="brand-sub">JANKALYAN SAMITI</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+          <a href="about.html" class="nav-link" data-i18n="nav.about">About Us</a>
+          <a href="programs.html" class="nav-link" data-i18n="nav.programs">Programs</a>
+          <a href="donate.html" class="nav-link" data-i18n="nav.donate">Donate</a>
+          <a href="gallery.html" class="nav-link active" data-i18n="nav.gallery">Gallery</a>
+          <a href="events.html" class="nav-link" data-i18n="nav.events">Events</a>
+          <a href="team.html" class="nav-link" data-i18n="nav.team">Team</a>
+          <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <div class="header-cta-group">
+          <a href="donate.html" class="btn btn-donate">
+            <i class="fa-solid fa-heart heart-beat"></i>
+            <span data-i18n="nav.donateBtn">Donate Now</span>
+          </a>
+          <button id="mobileToggleBtn" class="mobile-toggle-btn" aria-label="Open Navigation Menu">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MOBILE NAVIGATION DRAWER ================= -->
+  <div id="mobileNavOverlay" class="mobile-nav-overlay"></div>
+  <aside id="mobileNavDrawer" class="mobile-nav-drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <img src="assets/images/logo.png" alt="Logo" width="38" height="38">
+        <span class="brand-name" style="font-size: 0.95rem;">ANAND JANKI</span>
+      </div>
+      <button id="drawerCloseBtn" class="drawer-close-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="drawer-links">
+      <a href="index.html" class="drawer-link"><span data-i18n="nav.home">Home</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="drawer-link"><span data-i18n="nav.about">About Us</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="programs.html" class="drawer-link"><span data-i18n="nav.programs">Programs</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="donate.html" class="drawer-link"><span data-i18n="nav.donate">Donate</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="gallery.html" class="drawer-link active"><span data-i18n="nav.gallery">Gallery</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="events.html" class="drawer-link"><span data-i18n="nav.events">Events</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="team.html" class="drawer-link"><span data-i18n="nav.team">Team</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="drawer-link"><span data-i18n="nav.contact">Contact</span> <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+      <button id="langSwitchBtnMobile" class="btn btn-outline" style="width: 100%;">
+        <i class="fa-solid fa-globe"></i>
+        <span data-i18n="topbar.langBtn">हिन्दी</span>
+      </button>
+      <a href="donate.html" class="btn btn-donate" style="width: 100%;">
+        <i class="fa-solid fa-heart"></i>
+        <span data-i18n="nav.donateBtn">Donate Now</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-banner">
+    <div class="hero-pattern-bg"></div>
+    <div class="container">
+      <div class="page-banner-content reveal">
+        <h1 data-i18n="gallery.badge">Photo Gallery</h1>
+        <p data-i18n="gallery.subtitle">Real moments of hope, empowerment, and transformation captured across our centers.</p>
+        <div class="breadcrumb-nav">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span data-i18n="nav.gallery">Gallery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY SECTION ================= -->
+  <section class="gallery-section section-padding">
+    <div class="container">
+      <!-- Filter Tabs -->
+      <div class="gallery-filter-nav reveal">
+        <button class="filter-btn active" data-filter="all" data-i18n="gallery.filterAll">All Photos</button>
+        <button class="filter-btn" data-filter="women" data-i18n="gallery.filterWomen">Women Empowerment</button>
+        <button class="filter-btn" data-filter="education" data-i18n="gallery.filterEdu">Child Education</button>
+        <button class="filter-btn" data-filter="health" data-i18n="gallery.filterHealth">Health Camps</button>
+        <button class="filter-btn" data-filter="relief" data-i18n="gallery.filterRelief">Distribution Drives</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <!-- 1. Women Silai Kendra -->
+        <div class="gallery-item reveal delay-100" data-category="women">
+          <img src="assets/images/banner.jpg" alt="Women Tailoring & Skill Development Batch">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+            <p class="gallery-caption" data-i18n="gallery.img1.cap">Women Tailoring & Skill Development Batch</p>
+          </div>
+        </div>
+
+        <!-- 2. Child Education -->
+        <div class="gallery-item reveal delay-200" data-category="education">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=80" alt="Free Educational Books & Bag Distribution">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+            <p class="gallery-caption" data-i18n="gallery.img2.cap">Free Educational Books & Bag Distribution</p>
+          </div>
+        </div>
+
+        <!-- 3. Health Camp -->
+        <div class="gallery-item reveal delay-300" data-category="health">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=700&q=80" alt="Free Eye Checkup & Medical Health Camp">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+            <p class="gallery-caption" data-i18n="gallery.img3.cap">Free Eye Checkup & Medical Health Camp</p>
+          </div>
+        </div>
+
+        <!-- 4. Winter Blanket Distribution -->
+        <div class="gallery-item reveal delay-400" data-category="relief">
+          <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=700&q=80" alt="Winter Warm Blanket Distribution in Village">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+            <p class="gallery-caption" data-i18n="gallery.img4.cap">Winter Warm Blanket Distribution in Village</p>
+          </div>
+        </div>
+
+        <!-- 5. Self Reliant Women -->
+        <div class="gallery-item reveal delay-100" data-category="women">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" alt="Self-Reliant Women with New Sewing Machines">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+            <p class="gallery-caption" data-i18n="gallery.img5.cap">Self-Reliant Women with New Sewing Machines</p>
+          </div>
+        </div>
+
+        <!-- 6. Children Coaching Class -->
+        <div class="gallery-item reveal delay-200" data-category="education">
+          <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&q=80" alt="Children Primary Coaching & Literacy Class">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+            <p class="gallery-caption" data-i18n="gallery.img6.cap">Children Primary Coaching & Literacy Class</p>
+          </div>
+        </div>
+
+        <!-- 7. Tree Plantation Drive -->
+        <div class="gallery-item reveal delay-300" data-category="relief">
+          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=700&q=80" alt="Rural Tree Plantation & Environmental Awareness">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+            <p class="gallery-caption" data-i18n="gallery.img7.cap">Rural Tree Plantation & Environmental Awareness</p>
+          </div>
+        </div>
+
+        <!-- 8. Health Awareness Session -->
+        <div class="gallery-item reveal delay-400" data-category="health">
+          <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=700&q=80" alt="Community Awareness & Health Counseling Session">
+          <div class="gallery-overlay">
+            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+            <p class="gallery-caption" data-i18n="gallery.img8.cap">Community Awareness & Health Counseling Session</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MODAL: GALLERY LIGHTBOX ================= -->
+  <div id="lightboxModal" class="lightbox-modal">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Close Lightbox"><i class="fa-solid fa-xmark"></i></button>
+    <button id="lightboxPrev" class="lightbox-nav-btn lightbox-prev" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt="Gallery Preview">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+    <button id="lightboxNext" class="lightbox-nav-btn lightbox-next" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <img src="assets/images/logo.png" alt="Logo" width="44" height="44">
+            <span class="brand-name" style="color: #ffffff;">ANAND JANKI</span>
+          </div>
+          <p data-i18n="footer.desc">
+            Anand Janki Jankalyan Samiti is a government-registered non-profit organization striving for social equality, women's self-reliance, and child literacy in India.
+          </p>
+          <div class="footer-legal-tag">
+            <strong style="color: #fbbf24; display: block; margin-bottom: 4px;" data-i18n="footer.regInfoTitle">Statutory Accreditations</strong>
+            <p data-i18n="footer.reg1">Society Act XXI of 1860 (No: 2293-596/2015-2016/AL 36898)</p>
+            <p data-i18n="footer.reg2">NITI Aayog NGO Darpan U.A. No: BR20E0010867</p>
+            <p data-i18n="footer.reg3">PAN Number: AAFTA1192G</p>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="about.html" data-i18n="nav.about">About Us</a>
+            <a href="programs.html" data-i18n="nav.programs">Our Programs</a>
+            <a href="donate.html" data-i18n="nav.donate">Donate</a>
+            <a href="gallery.html" data-i18n="nav.gallery">Photo Gallery</a>
+            <a href="events.html" data-i18n="nav.events">Events & Updates</a>
+            <a href="team.html" data-i18n="nav.team">Leadership</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4 data-i18n="footer.programs">Key Programs</h4>
+          <div class="footer-links">
+            <a href="programs.html" data-i18n="footer.silai">Women Silai Kendra</a>
+            <a href="programs.html" data-i18n="footer.vidya">Child Education Drive</a>
+            <a href="programs.html" data-i18n="footer.health">Free Medical Camps</a>
+            <a href="programs.html" data-i18n="footer.blanket">Winter Relief Drives</a>
+            <a href="programs.html" data-i18n="footer.green">Tree Plantation</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4 data-i18n="footer.newsletterTitle">Newsletter</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 12px;" data-i18n="footer.newsletterDesc">
+            Subscribe to receive monthly newsletters and field progress reports.
+          </p>
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" placeholder="Enter your email" data-i18n-placeholder="footer.newsletterPlh" required>
+            <button type="submit" class="btn btn-secondary" style="padding: 9px 14px;">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <div style="margin-top: 16px;">
+            <p style="color: #f1f5f9; font-size: 0.84rem;"><i class="fa-solid fa-phone" style="color: #fbbf24; margin-right: 6px;"></i> +91 8298413062</p>
+            <p style="color: #f1f5f9; font-size: 0.84rem;"><i class="fa-solid fa-envelope" style="color: #fbbf24; margin-right: 6px;"></i> info@anandjankijks.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <div>
+            &copy; 2026 <strong>Anand Janki Jankalyan Samiti</strong>. <span data-i18n="footer.rights">All Rights Reserved.</span>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="about.html" data-i18n="footer.transparency">Transparency & 80G</a>
+            <a href="contact.html" data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="contact.html" data-i18n="footer.terms">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions -->
+  <div class="floating-actions-container">
+    <a href="https://wa.me/918298413062?text=Hello%20Anand%20Janki%20Jankalyan%20Samiti" target="_blank" class="floating-btn floating-whatsapp" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="#" id="backToTopBtn" class="floating-btn back-to-top-btn" title="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </div>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
