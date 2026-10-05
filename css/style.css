@@ -1867,6 +1867,65 @@ textarea.form-control {
   color: #ffffff;
 }
 
+/* Developer Credit Highlight & Animation */
+.developer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.credit-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: #fbbf24 !important;
+  background: rgba(251, 191, 36, 0.1);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none !important;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.15);
+  animation: pulseGlowCoral 3s infinite ease-in-out;
+}
+
+.credit-highlight:hover {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff !important;
+  border-color: #fbbf24;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.6);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.credit-highlight i {
+  color: #fbbf24;
+  font-size: 0.85rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.credit-highlight:hover i {
+  color: #ffffff;
+  transform: rotate(15deg) scale(1.1);
+}
+
+@keyframes pulseGlowCoral {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(251, 191, 36, 0.2);
+    border-color: rgba(251, 191, 36, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(251, 191, 36, 0.45);
+    border-color: rgba(251, 191, 36, 0.7);
+  }
+}
+
 /* ---------------- Floating Action Buttons ---------------- */
 .floating-actions-container {
   position: fixed;

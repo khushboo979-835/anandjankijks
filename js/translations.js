@@ -249,6 +249,7 @@ const translations = {
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms & Conditions",
     "footer.transparency": "Transparency & 80G",
+    "footer.creditBy": "Designed & Managed by",
 
     // Modals
     "modal.volTitle": "Join Anand Janki Jankalyan Samiti as Volunteer",
@@ -522,6 +523,7 @@ const translations = {
     "footer.privacy": "गोपनीयता नीति",
     "footer.terms": "नियम व शर्तें",
     "footer.transparency": "पारदर्शिता व 80G",
+    "footer.creditBy": "डिज़ाइन एवं प्रबंधन:",
 
     // Modals
     "modal.volTitle": "आनंद जानकी जनकल्याण समिति से बतौर स्वयंसेवक जुड़ें",
